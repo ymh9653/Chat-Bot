@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <div id="test">
+    <p>{{message}}</p>
+  </div>
+
+  <div id="test2">
+    <input v-model="message" placeholder="Enter text here!">
+  </div>
+
+  <script>
+    var test = new Vue({
+  el: '#test',
+  data: {
+    message: 'Hello Shakeel!'
+  }
+})
+
+var test2 = new Vue({
+	el: '#test2',
+  data: {
+  }
+})
+  </script>
+
+</body>
+</html>
