@@ -12,6 +12,7 @@
 
   <div id="test2">
     <input v-model="message" placeholder="Enter text here!">
+    <button v-on:click="say('This button is still in testing')">Submit Message</button>
   </div>
 
   <script>
@@ -24,7 +25,10 @@
 
 var test2 = new Vue({
 	el: '#test2',
-  data: {
+  methods: {
+    say: function (message) {
+      alert(message)
+    }
   }
 })
   </script>
