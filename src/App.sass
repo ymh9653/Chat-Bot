@@ -1,0 +1,53 @@
+$color: #FF9800
+
+\:root
+    --mdc-theme-primary: $color
+
+body
+    margin: 0
+    background-color: #494949
+    font-family: 'Roboto', 'Google Sans', sans-serif
+
+.themed
+  color: $color !important
+
+td
+    margin-top: 30px
+    margin-bottom: 10px
+
+.chat-window
+    width: 100%
+
+.bubble
+    max-width: 300px
+    background-color: #E1E1E1
+    padding: 16px
+    border-radius: 8px
+    color: rgba(0,0,0,0.7)
+    float: right
+    animation: msg .25s linear
+
+.query
+    padding: 16px 0px
+    background-color: white
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    z-index: 999
+    position: fixed
+    width: 100%
+
+.queryForm
+  border: 0
+  width: 100% - 20%
+  margin-left: 60px
+  font-size: 16px
+  outline: none
+  color: rgba(0,0,0,0.8)
+  font-weight: 500
+
+  @media screen and (max-width: 320px)
+    width: 100% - 35%
+
+.bubble.bot
+  background-color: white
+  float: left
+  margin-right: 10px
