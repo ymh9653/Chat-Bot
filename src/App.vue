@@ -16,6 +16,11 @@ add them here etc. This is the main page that displays on the browser -->
       <h1>
         AUT Chat bot !
       </h1>
+      <h2>
+        Made by AUT chatbot team 4<br>
+        Powered by Vue.js
+      </h2>
+
       <table v-for= "a in answers" class="chat-window">
         <tr>
           <td class="bubble">
@@ -38,13 +43,12 @@ add them here etc. This is the main page that displays on the browser -->
     </div>
 
     <section id = "textBox">
-
       <div class="query">
         <input aria-label="Please enter something" autocomplete="off" v-model="query" class="queryForm" @keyup.enter="submit" placeholder="Please enter something" autofocus type="text">
       </div>
-
     </section>
-    <a id="bottom"</a>
+
+    <a id="bottom"></a>
   </main>
 </section>
 </template>
@@ -71,7 +75,7 @@ export default {
   watch: {
     answers: function(val){
       setTimeout(() => {
-        document.querySelector('#textBox').scrollIntoView({
+        document.querySelector('#bottom').scrollIntoView({
           behaviour: 'smooth'
         })
       }, 2)
@@ -86,10 +90,6 @@ export default {
         client.textRequest(this.query).then((response) => {
           console.log(response);
           this.answers.push(response)
-          //this.answers.push(this.query)
-          //this.answers.push(response['result']['fulfillment']['speech'])
-
-
           this.query = ''
           console.log(this.answers)
 
