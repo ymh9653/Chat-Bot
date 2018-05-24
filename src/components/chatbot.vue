@@ -74,12 +74,10 @@ export default {
 
       if(event.key == "Enter")
       {
-        client.textRequest(this.query).then((response) => {
-          console.log(response);
+        client.textRequest(this.query).then((response) =>
+        {
           this.answers.push(response)
           this.query = ''
-          console.log(this.answers)
-
         })
       }
     }
