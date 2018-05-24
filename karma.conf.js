@@ -24,7 +24,11 @@ module.exports = function(config) {
       'Chat-Bot/src/**',
       'Chat-Bot\src\**',*/
       '**\src\**',
-      '**\test\**'
+      '**\test\**',
+      '@/src/app.vue',
+      '@/test/chatbot.js',
+      'test/**/*.js',
+      'src/**/*.{js,vue}'
     ],
 
 
