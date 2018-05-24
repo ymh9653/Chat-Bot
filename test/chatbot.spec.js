@@ -2,19 +2,9 @@
 import { expect } from 'chai'
 import { mount } from 'avoriaz'
 import sinon from 'sinon'
-import Foo from '../src/components/Foo.vue'
 import chatbot from '../src/components/chatbot.vue'
 import Vue from 'vue'
 
-
-/*
-describe('Foo.vue', () => {
-  it('has a root element with class foo', () => {
-    const wrapper = mount(Foo)
-    expect(wrapper.is('.foo')).to.equal(true)
-  })
-})
-*/
 describe('chatbot.vue', () => {
 
   it('is a component', () => {
