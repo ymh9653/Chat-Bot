@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start": "node server.js",
     "build": "node build/build.js",
     "test": "mocha-webpack --webpack-config build/webpack.test.config.js test --recursive --require test/.setup"
   },
@@ -14,6 +14,7 @@
     "api-ai-javascript": "^2.0.0-beta.21",
     "clean-scripts": "^1.9.2",
     "dialogflow": "^0.3.0",
+    "express": "^4.16.3",
     "node-sass": "^4.9.0",
     "npm": "^6.0.1",
     "npm-clean": "^1.0.3",
