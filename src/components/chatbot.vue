@@ -49,6 +49,7 @@ add them here etc. This is the main page that displays on the browser -->
 <!-- Scripts -->
 <script>
 import { ApiAiClient } from 'api-ai-javascript'
+var Autolinker = require( 'autolinker' );
 const client = new ApiAiClient({accessToken: '1b2114637d8e4d6291730755a6d737df'})
 
 export default {
@@ -56,7 +57,6 @@ export default {
     return{
       answers: [],
       query: ''
-
     }
   },
   watch: {
@@ -71,15 +71,23 @@ export default {
 
   methods:{
     submit: function(event){
-
       if(event.key == "Enter")
       {
+        this.count++
         client.textRequest(this.query).then((response) =>
         {
           this.answers.push(response)
           this.query = ''
+          if(this.answers.length > 1)
+          {
+            this.linkify()
+          }
         })
       }
+    },
+    linkify: function() {
+      var responseText = document.getElementsByClassName('bubble bot')
+      responseText[responseText.length-1].innerHTML=Autolinker.link(responseText[responseText.length-1].innerHTML)
     }
   }
 }
